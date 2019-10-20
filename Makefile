@@ -20,8 +20,14 @@ help:
 	@echo '    make (TARGET) [EXTRA ARGUMENTS]'
 	@echo ''
 	@echo 'TARGET can be:'	
-	@echo 'image       - generates the Docker image using a build command.'	
+	@echo 'image       - generates the Docker image using a build command.'
+	@echo 'push        - push the Docker image to specified registry.'
+	@echo 'release     - generates the Docker image and pushes to registry'	
 	@echo 'help        - this message.'
 
-image: compile
-	docker build . -t "$(DOCKER_IMAGE)"
+image:
+	docker build -t "$(DOCKER_IMAGE)" .
+push:
+	docker push "$(DOCKER_IMAGE)"
+release:
+	make image push	
