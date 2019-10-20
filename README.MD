@@ -5,6 +5,14 @@ The main purpose of this project is create a tool that do the work of manager do
 
 # Using:
 
+## Clone this repo
+
+```
+git@github.com:georgesouzafarias/makefile-docker-k8s.git
+
+cd ./makefile-docker-k8s
+```
+
 ## File project.ini
 The file project.ini is very imporant for parameter the Makefile.
 
