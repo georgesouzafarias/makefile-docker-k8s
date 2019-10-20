@@ -11,13 +11,13 @@ The file project.ini is very imporant for parameter the Makefile.
 `cat./.config/project.ini`
 
 ```
-IMAGUR_HUB  = <HUB_URL>
+IMAGEM_HUB  = <HUB_URL>
 IMAGE_REPO = <REPO_NAME>
 APPLICATION_NAME= <APPTICATION_NAME>
 ```
 where:
 
-IMAGUR_HUB: The adress of the local hub.
+IMAGEM_HUB: The adress of the local hub.
 IMAGE_REPO: The name of repository.
 APPLICATION_NAME: The name of the application.
 
