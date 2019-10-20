@@ -9,8 +9,7 @@
 CONFIG ?= ./.config/project.ini
 include $(CONFIG)
 
-PACKAGE ?= $(shell dirname $(CURDIR))
-VERSION := $(shell git describe --tags --dirty --match="v*" 2> /dev/null || cat $(CURDIR)/.version 2> /dev/null || echo v0)
+VERSION := $(shell git describe --tags --dirty --match="v*" 2> /dev/null || cat $(CURDIR)/.config/version 2> /dev/null || echo v0.1)
 
 DOCKER_IMAGE := $(IMAGE_HUB)/$(IMAGE_REPO)/$(APPLICATION_NAME):$(VERSION)
 
